@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #app {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <span>姓名: {{ name }}</span>
+      <input type="text" v-model="name" />
+      <span>爱好: {{ more.hobby }}</span>
+      <input type="text" v-model="more.hobby" />
+    </div>
+  </body>
+  <script src="../js/vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: "#app",
+      data: {
+        name: "xiaomi",
+        more: {
+          hobby: "干饭",
+        },
+      },
+    });
+  </script>
+</html>
