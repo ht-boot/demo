@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      ul li {
+        list-style: none;
+        padding: 8px;
+      }
+
+      .container {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 36px;
+        border: 1px solid #000;
+        overflow: hidden;
+      }
+      ul {
+        position: absolute;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li>列表1--------------</li>
+        <li>列表2--------------</li>
+        <li>列表3--------------</li>
+        <li>列表4--------------</li>
+        <li>列表5--------------</li>
+      </ul>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
