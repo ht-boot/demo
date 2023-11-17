@@ -124,7 +124,7 @@ function Compile(element, vm) {
   vm.$el.appendChild(fragment);
 }
 
-// 收集依赖 - 订阅者与通知着
+// 收集依赖 - 订阅者与通知者
 class Dependency {
   constructor() {
     this.subscribers = [];
@@ -152,7 +152,7 @@ class Watcher {
     this.vm = vm;
     this.key = key;
     this.callback = callback;
-    // 临时属性
+    // 创建临时属性
     Dependency.temp = this;
     // 触发正确的getter
     key
