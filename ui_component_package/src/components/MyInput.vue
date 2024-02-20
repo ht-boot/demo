@@ -14,6 +14,4 @@
 import { useSlots } from "vue";
 
 const slots = useSlots();
-
-console.log(slots);
 </script>

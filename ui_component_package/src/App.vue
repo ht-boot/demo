@@ -10,17 +10,21 @@
   <HelloWorld msg="Vite + Vue" />
 
   // 二次封装组件 el-input
-  <MyInput a="1" b="232" c="3" v-model="text">
-    <template #prepend>Http://</template>
-    <template #append>.com</template>
-  </MyInput>
+  <template v-for="n in 5000" :key="n">
+    <MyInput a="1" b="232" c="3" v-model="text" v-if="defer(n)">
+      <template #prepend>Http://</template>
+      <template #append>{{ n }}</template>
+    </MyInput>
+  </template>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 import MyInput from "./components/MyInput.vue";
+import { useDefer } from "./hooks/useDefer";
 
+const defer = useDefer(100);
 const text = ref("sss");
 </script>
 
