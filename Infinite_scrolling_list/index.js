@@ -20,10 +20,10 @@ const scroll = () => {
       setTimeout(() => {
         current = 0;
         ul.style.transition = "none";
-        ul.style.top = `0px`;
+        ul.style.transform = `translateY(0px)`;
       }, 500);
     }
-    ul.style.top = `${-height * current}px`;
+    ul.style.transform = `translateY(${-height * current}px)`;
   }, 1000);
 };
 
